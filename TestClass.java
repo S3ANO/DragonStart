@@ -14,10 +14,11 @@ public class TestClass
        Dragon jen = new Dragon();
        
        jen.drawDragon(g);
+       jen.dragonElement(g);
      
        System.out.println(jen);
        
-       Dragon sarah = new Dragon(300,300,2, Color.PINK, "Fire");
+       Dragon sarah = new Dragon(300, 300, 2, Color.PINK, "Water");
        sarah.drawDragon(g);
        sarah.dragonElement(g);
     }

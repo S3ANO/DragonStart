@@ -67,14 +67,20 @@ public class Dragon
     }
     private void drawFire(Graphics g) {
         g.setColor(Color.RED);
-        for (int i = 1; i < 10; i++) {
-            g.fillOval(x, y + size * 12, size * 10, size * 10);
+        for (int i = 1; i <= 10; i++) {
+            g.fillOval(x - i * 15, y + size * 15, i * 10, i * 10);
         }
     }
     private void drawWater(Graphics g) {
         g.setColor(Color.BLUE);
-        for (int i = 1; i < 10; i++) {
-            g.fillOval(x, y, size * 10, size * 10);
+        for (int i = 1; i <= 10; i++) {
+            g.fillOval(x - i * 15, y + size * 15, i * 10, i * 10);
+        }
+    }
+    private void drawElectricity(Graphics g) {
+        g.setColor(Color.YELLOW);
+        for (int i = 1; i <= 10; i++) {
+            g.fillOval(x - i * 15, y + size * 15, i * 10, i * 10);
         }
     }
     public void dragonElement(Graphics g)
@@ -83,6 +89,8 @@ public class Dragon
             drawFire(g);
         } else if (attackType.equals("Water")) {
             drawWater(g);
+        } else if (attackType.equals("Electricity")) {
+            drawElectricity(g);
         }
     }
     /**
