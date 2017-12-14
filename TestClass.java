@@ -10,6 +10,7 @@ public class TestClass
    public static void main(String args[]) throws InterruptedException{
        DrawingPanel panel = new DrawingPanel(800,800);
        Graphics g = panel.getGraphics();
+       int i = 0;
        
        Dragon jen = new Dragon();
        
@@ -21,6 +22,10 @@ public class TestClass
        Dragon sarah = new Dragon(300, 300, 2, Color.PINK, "Water");
        sarah.drawDragon(g);
        sarah.dragonElement(g);
-       sarah.dragonMove(g);
+       while (i <= 20) {
+           Thread.sleep(1000);
+           sarah.dragonMove(g);
+           i++;
+       }
    }
 }

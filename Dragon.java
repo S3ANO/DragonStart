@@ -65,7 +65,7 @@ public class Dragon
         g.fillRect(bodyX + size * 80, bodyY + size * 20, size * 10, size * 10);
         g.fillRect(bodyX + size * 90, bodyY + size * 30, size * 10, size * 10);
     }
-    public void dragonClear(Graphics g) {
+    private void dragonClear(Graphics g) {
         g.setColor(Color.WHITE);
         int bodyX = x + size * 25;
         int bodyY = y + size * 25;
@@ -107,7 +107,7 @@ public class Dragon
         g.setColor(c);
         g.fillRect(bodyX, bodyY + size * 25, size * 10, size * 25);
         g.fillRect(bodyX - size * 25, bodyY + size * 40, size * 50, size * 10);
-        Thread.sleep(3000);
+        Thread.sleep(2000);
         dragonClear(g);
         g.setColor(c);
         g.fillRect(bodyX, bodyY + size * 25, size * 10, size * 50);
