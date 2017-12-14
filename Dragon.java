@@ -70,6 +70,7 @@ public class Dragon
         int bodyX = x + size * 25;
         int bodyY = y + size * 25;
         g.fillRect(bodyX, bodyY + size * 25, size * 10, size * 50);
+        g.fillRect(bodyX - size * 50, bodyY + size * 40, size * 50, size * 10);
     }
     private void drawFire(Graphics g) {
         g.setColor(Color.RED);
@@ -100,11 +101,15 @@ public class Dragon
         }
     }
     public void dragonMove(Graphics g) throws InterruptedException{
-        dragonClear(g);
-        Thread.sleep(3000);
-        g.setColor(c);
         int bodyX = x + size * 25;
         int bodyY = y + size * 25;
+        dragonClear(g);
+        g.setColor(c);
+        g.fillRect(bodyX, bodyY + size * 25, size * 10, size * 25);
+        g.fillRect(bodyX - size * 25, bodyY + size * 40, size * 50, size * 10);
+        Thread.sleep(3000);
+        dragonClear(g);
+        g.setColor(c);
         g.fillRect(bodyX, bodyY + size * 25, size * 10, size * 50);
     }
     /**
