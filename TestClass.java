@@ -10,6 +10,10 @@ public class TestClass
    public static void main(String args[]) throws InterruptedException{
        DrawingPanel panel = new DrawingPanel(800,800);
        Graphics g = panel.getGraphics();
+       panel.setBackground(Color.BLACK);
+       Dragon back = new Dragon();
+       back.drawStars(g, panel);
+       
        int i = 0;
        
        Dragon jen = new Dragon();

@@ -46,6 +46,14 @@ public class Dragon
      * drawDragon(Graphics g)
      * Starting of drawing, complete your Dragon....
      */
+    public void drawStars(Graphics g,DrawingPanel panel)
+    {
+        g.setColor(Color.WHITE);
+        int xMultiply = panel.getX() / 50;
+        for (int i = 0; i < xMultiply; i++) {
+            g.fillRect(xMultiply * i, xMultiply * i, 5, 5);
+        }
+    }
     public void drawDragon(Graphics g)
     {
         int bodyX = x + size * 25; //Body X Coordinate
@@ -54,7 +62,7 @@ public class Dragon
         int [] wingY = {bodyY, bodyY - size * 25, bodyY - size * 25};
         g.setColor(c); // Dragon Color
         g.fillRect(x, y, size * 25, size * 25); //Draw Head
-        g.setColor(Color.WHITE);
+        g.setColor(Color.BLACK);
         g.fillRect(x, y + size * 12, size * 13, size * 10); //Draw Mouth
         g.setColor(c); // Dragon Color
         g.fillRect(bodyX, bodyY, size * 60, size * 50); //Draw Body
@@ -66,7 +74,7 @@ public class Dragon
         g.fillRect(bodyX + size * 90, bodyY + size * 30, size * 10, size * 10);
     }
     private void dragonClear(Graphics g) {
-        g.setColor(Color.WHITE);
+        g.setColor(Color.BLACK);
         int bodyX = x + size * 25;
         int bodyY = y + size * 25;
         g.fillRect(bodyX, bodyY + size * 25, size * 10, size * 50);
