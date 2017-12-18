@@ -1,12 +1,10 @@
 #BlueJ class context
-comment0.target=Scene
-comment0.text=\n\ Write\ a\ description\ of\ class\ Scene\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
-comment1.params=
-comment1.target=Scene()
-comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Scene\n
-comment2.params=width\ height\ horizonColor\ starColor
-comment2.target=Scene(int,\ int,\ java.awt.Color,\ java.awt.Color)
-comment2.text=\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\n\ \n\ @param\ \ y\ \ \ a\ sample\ parameter\ for\ a\ method\n\ @return\ \ \ \ \ the\ sum\ of\ x\ and\ y\ \n
-comment3.params=g\ panel
-comment3.target=void\ drawStars(java.awt.Graphics,\ DrawingPanel)
-numComments=4
+comment0.params=
+comment0.target=Scene()
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Scene\r\n
+comment1.params=width\ height\ horizonColor\ starColor
+comment1.target=Scene(int,\ int,\ java.awt.Color,\ java.awt.Color)
+comment1.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\ \r\n\ @param\ \ y\ \ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ \ the\ sum\ of\ x\ and\ y\ \r\n
+comment2.params=g\ panel
+comment2.target=void\ drawStars(java.awt.Graphics,\ DrawingPanel)
+numComments=3

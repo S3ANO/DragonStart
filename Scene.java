@@ -43,30 +43,32 @@ public class Scene
     {
         panel.setBackground(horizonColor);
         g.setColor(starColor);
-        int xMultiply = panel.getX() / 50;
+        int xMultiply =  width / 50;
+        int yMultiply =  height / 50;
+        System.out.println(panel.getX());
         for (int i = 0; i < xMultiply; i++) {
-            g.fillRect(xMultiply * (i * 10), xMultiply, 5, 5);
-        }
-        for (int i = 1; i < xMultiply; i++) {
-            g.fillRect(xMultiply * (i * 10), xMultiply * 10, 5, 5);
-        }
-        for (int i = 0; i < xMultiply; i++) {
-            g.fillRect(xMultiply * (i * 10), xMultiply * 20, 5, 5);
-        }
-        for (int i = 1; i < xMultiply; i++) {
-            g.fillRect(xMultiply * (i * 10), xMultiply * 30, 5, 5);
+            g.fillRect(xMultiply * (i * 10), yMultiply, 5, 5);
         }
         for (int i = 0; i < xMultiply; i++) {
-            g.fillRect(xMultiply * (i * 10), xMultiply * 40, 5, 5);
-        }
-        for (int i = 1; i < xMultiply; i++) {
-            g.fillRect(xMultiply * (i * 10), xMultiply * 50, 5, 5);
+            g.fillRect(xMultiply * (i * 10), yMultiply * 10, 5, 5);
         }
         for (int i = 0; i < xMultiply; i++) {
-            g.fillRect(xMultiply * (i * 10), xMultiply * 60, 5, 5);
+            g.fillRect(xMultiply * (i * 10), yMultiply * 20, 5, 5);
         }
-        for (int i = 1; i < xMultiply; i++) {
-            g.fillRect(xMultiply * (i * 10), xMultiply * 70, 5, 5);
+        for (int i = 0; i < xMultiply; i++) {
+            g.fillRect(xMultiply * (i * 10), yMultiply * 30, 5, 5);
+        }
+        for (int i = 0; i < xMultiply; i++) {
+            g.fillRect(xMultiply * (i * 10), yMultiply * 40, 5, 5);
+        }
+        for (int i = 0; i < xMultiply; i++) {
+            g.fillRect(xMultiply * (i * 10), yMultiply * 50, 5, 5);
+        }
+        for (int i = 0; i < xMultiply; i++) {
+            g.fillRect(xMultiply * (i * 10), yMultiply * 60, 5, 5);
+        }
+        for (int i = 0; i < xMultiply; i++) {
+            g.fillRect(xMultiply * (i * 10), yMultiply * 70, 5, 5);
         }
     }
 }

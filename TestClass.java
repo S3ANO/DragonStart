@@ -8,7 +8,9 @@ import java.awt.*;
 public class TestClass
 {
    public static void main(String args[]) throws InterruptedException{
-       DrawingPanel panel = new DrawingPanel(800,800);
+       int width = 800;
+       int height = 800;
+       DrawingPanel panel = new DrawingPanel(width,height);
        Graphics g = panel.getGraphics();
        Scene s = new Scene();
        s.drawStars(g, panel);
