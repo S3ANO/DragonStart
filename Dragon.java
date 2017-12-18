@@ -46,14 +46,6 @@ public class Dragon
      * drawDragon(Graphics g)
      * Starting of drawing, complete your Dragon....
      */
-    public void drawStars(Graphics g,DrawingPanel panel)
-    {
-        g.setColor(Color.WHITE);
-        int xMultiply = panel.getX() / 50;
-        for (int i = 0; i < xMultiply; i++) {
-            g.fillRect(xMultiply * i, xMultiply * i, 5, 5);
-        }
-    }
     public void drawDragon(Graphics g)
     {
         int bodyX = x + size * 25; //Body X Coordinate

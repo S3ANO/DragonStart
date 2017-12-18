@@ -39,12 +39,34 @@ public class Scene
         this.horizonColor = horizonColor;
         this.starColor = starColor;
     }
-    public void drawStars(Graphics g,DrawingPanel panel)
+    public void drawStars(Graphics g, DrawingPanel panel)
     {
-        g.setColor(Color.WHITE);
+        panel.setBackground(horizonColor);
+        g.setColor(starColor);
         int xMultiply = panel.getX() / 50;
         for (int i = 0; i < xMultiply; i++) {
-            g.fillRect(xMultiply * i, xMultiply * i, 5, 5);
+            g.fillRect(xMultiply * (i * 10), xMultiply, 5, 5);
+        }
+        for (int i = 1; i < xMultiply; i++) {
+            g.fillRect(xMultiply * (i * 10), xMultiply * 10, 5, 5);
+        }
+        for (int i = 0; i < xMultiply; i++) {
+            g.fillRect(xMultiply * (i * 10), xMultiply * 20, 5, 5);
+        }
+        for (int i = 1; i < xMultiply; i++) {
+            g.fillRect(xMultiply * (i * 10), xMultiply * 30, 5, 5);
+        }
+        for (int i = 0; i < xMultiply; i++) {
+            g.fillRect(xMultiply * (i * 10), xMultiply * 40, 5, 5);
+        }
+        for (int i = 1; i < xMultiply; i++) {
+            g.fillRect(xMultiply * (i * 10), xMultiply * 50, 5, 5);
+        }
+        for (int i = 0; i < xMultiply; i++) {
+            g.fillRect(xMultiply * (i * 10), xMultiply * 60, 5, 5);
+        }
+        for (int i = 1; i < xMultiply; i++) {
+            g.fillRect(xMultiply * (i * 10), xMultiply * 70, 5, 5);
         }
     }
 }
