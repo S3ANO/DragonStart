@@ -45,30 +45,16 @@ public class Scene
         g.setColor(starColor);
         int xMultiply =  width / 50;
         int yMultiply =  height / 50;
-        System.out.println(panel.getX());
+        int yDown = 10;
         for (int i = 0; i < xMultiply; i++) {
             g.fillRect(xMultiply * (i * 10), yMultiply, 5, 5);
         }
-        for (int i = 0; i < xMultiply; i++) {
-            g.fillRect(xMultiply * (i * 10), yMultiply * 10, 5, 5);
+        for (int a = 0; a < 8; a++){ 
+            for (int i = 0; i < xMultiply; i++) {
+                g.fillRect(xMultiply * (i * 10), yMultiply * yDown, 5, 5);
+            }
+            yDown += 10;
         }
-        for (int i = 0; i < xMultiply; i++) {
-            g.fillRect(xMultiply * (i * 10), yMultiply * 20, 5, 5);
-        }
-        for (int i = 0; i < xMultiply; i++) {
-            g.fillRect(xMultiply * (i * 10), yMultiply * 30, 5, 5);
-        }
-        for (int i = 0; i < xMultiply; i++) {
-            g.fillRect(xMultiply * (i * 10), yMultiply * 40, 5, 5);
-        }
-        for (int i = 0; i < xMultiply; i++) {
-            g.fillRect(xMultiply * (i * 10), yMultiply * 50, 5, 5);
-        }
-        for (int i = 0; i < xMultiply; i++) {
-            g.fillRect(xMultiply * (i * 10), yMultiply * 60, 5, 5);
-        }
-        for (int i = 0; i < xMultiply; i++) {
-            g.fillRect(xMultiply * (i * 10), yMultiply * 70, 5, 5);
-        }
+        g.fillOval(width - (width / 4), 1, 150, 150);
     }
 }
