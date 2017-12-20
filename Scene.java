@@ -41,7 +41,8 @@ public class Scene
     }
     public void drawStars(Graphics g, DrawingPanel panel)
     {
-        panel.setBackground(horizonColor);
+        g.setColor(horizonColor);
+        g.fillRect(0, 0, width, height);
         g.setColor(starColor);
         int xMultiply =  width / 50;
         int yMultiply =  height / 50;
@@ -55,6 +56,11 @@ public class Scene
             }
             yDown += 10;
         }
-        g.fillOval(width - (width / 4), 1, 150, 150);
+        drawMoon(g);
+    }
+    private void drawMoon(Graphics g) {
+        g.setColor(Color.WHITE);
+        g.fillOval(width - (width / 4), 1, 200, 200);
+        g.fillOval(width - (width / 4), 1, 200, 200);
     }
 }
