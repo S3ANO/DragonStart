@@ -1,5 +1,7 @@
 import java.awt.*;
 import java.util.Scanner;
+import java.util.ArrayList;
+
 /**
  * Write a description of class TestClass here.
  *
@@ -9,6 +11,7 @@ import java.util.Scanner;
 public class TestClass
 {
    public static void main(String args[]) throws InterruptedException{
+       Scanner input = new Scanner(System.in);
        System.out.println("Insert the Width and Height of Your Template:");
        int width = input.nextInt();
        int height = input.nextInt();
@@ -26,34 +29,34 @@ public class TestClass
            num = input.nextInt();
        }
        while(num <= 0);
-       
        for(i = 1; i <= num; i++){
-           //Dragon 
-           //dragons.add(temp);
+           System.out.println("What RGB Colors Do You Want?");
+           int rgb1 = 256;
+           int rgb2 = 256;
+           int rgb3 = 256;
+           while(rgb1 > 255 || rgb2 > 255 || rgb3 > 255) {
+               rgb1 = input.nextInt();
+               rgb2 = input.nextInt();
+               rgb3 = input.nextInt();
+           }
+           Color rgbDrag = new Color(rgb1, rgb2, rgb3);
+           System.out.println("What is the Size?");
+           int size = input.nextInt();
+           System.out.println("What Attack Do You Want? Fire, Water, or Electricity?");
+           String attack = input.next();
+           Dragon temp = new Dragon(50 * i, 50 * i, size, rgbDrag, attack);  
+           dragons.add(temp);
        }
        for(i = 0; i <= dragons.size(); i++){
-           //Dragon 
-           //dragons.get(i).dragonElement
-       }
-       Dragon jen = new Dragon();
-       
-       jen.drawDragon(g);
-       jen.dragonElement(g);
-     
-       System.out.println(jen);
-       
-       Dragon sarah = new Dragon(300, 300, 2, Color.PINK, "Water");
-       sarah.drawDragon(g);
-       sarah.dragonElement(g);
-       i = 0;
-       int m = 0;
-       while (i <= dragons.size()){
-            while (m <= 10) {
+           int m = 0;
+           dragons.get(i).drawDragon(g); 
+           dragons.get(i).dragonElement(g);
+           while (m < 5) {
                 Thread.sleep(1000);
                 dragons.get(i).dragonMove(g);
                 m++;
             }
-            i++;
-   }
-}
+           i++;
+       }
+    }
 }
