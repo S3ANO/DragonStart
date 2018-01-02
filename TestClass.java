@@ -11,13 +11,14 @@ import java.util.ArrayList;
 public class TestClass
 {
    public static void main(String args[]) throws InterruptedException{
-       Scanner input = new Scanner(System.in);
+       Scanner inputNum = new Scanner(System.in);
+       Scanner inputText = new Scanner(System.in);
        System.out.println("Insert the Width and Height of Your Template:");
-       int width = input.nextInt();
-       int height = input.nextInt();
+       int width = inputNum.nextInt();
+       int height = inputNum.nextInt();
        DrawingPanel panel = new DrawingPanel(width,height);
        Graphics g = panel.getGraphics();
-       Scene s = new Scene();
+       Scene s = new Scene(width, height, Color.BLACK, Color. WHITE);
        s.drawStars(g, panel);
        
        int i;
@@ -26,7 +27,7 @@ public class TestClass
        
        do {
            System.out.println("How Many Dragons Do You Want?");
-           num = input.nextInt();
+           num = inputNum.nextInt();
        }
        while(num <= 0);
        for(i = 1; i <= num; i++){
@@ -35,28 +36,29 @@ public class TestClass
            int rgb2 = 256;
            int rgb3 = 256;
            while(rgb1 > 255 || rgb2 > 255 || rgb3 > 255) {
-               rgb1 = input.nextInt();
-               rgb2 = input.nextInt();
-               rgb3 = input.nextInt();
+               rgb1 = inputNum.nextInt();
+               rgb2 = inputNum.nextInt();
+               rgb3 = inputNum.nextInt();
            }
            Color rgbDrag = new Color(rgb1, rgb2, rgb3);
            System.out.println("What is the Size?");
-           int size = input.nextInt();
+           int size = inputNum.nextInt();
            System.out.println("What Attack Do You Want? Fire, Water, or Electricity?");
-           String attack = input.next();
-           Dragon temp = new Dragon(50 * i, 50 * i, size, rgbDrag, attack);  
+           String attack = inputText.next();
+           System.out.println("What Do You Want Your Dragon To Say?");
+           String dialogue = inputText.next();
+           Dragon temp = new Dragon(50 * i, 50 * i, size, rgbDrag, attack, dialogue);  
            dragons.add(temp);
        }
-       for(i = 0; i <= dragons.size(); i++){
+       for(i = 0; i < num; i++){
            int m = 0;
-           dragons.get(i).drawDragon(g); 
+           dragons.get(i).drawDragon(g);
            dragons.get(i).dragonElement(g);
            while (m < 5) {
                 Thread.sleep(1000);
                 dragons.get(i).dragonMove(g);
                 m++;
             }
-           i++;
        }
     }
 }

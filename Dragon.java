@@ -13,6 +13,7 @@ public class Dragon
     private int size;
     private Color c;
     private String attackType;
+    private String dialogue;
 
     /**
      * Default Constructor for objects of class Dragon
@@ -25,13 +26,15 @@ public class Dragon
         size = 1;
         c = Color.GREEN; // INS comment here.
         attackType = "Fire";
+        dialogue = "Hello,world!";
     }
-    public Dragon(int x,int y, int size, Color c, String attackType){
+    public Dragon(int x,int y, int size, Color c, String attackType, String dialogue){
         this.x = x;
         this.y = y;
         this.size = size;
         this.c = c; // You saw nothing.
         this.attackType = attackType;
+        this.dialogue = dialogue;
     }
         
     
@@ -64,6 +67,7 @@ public class Dragon
         g.fillRect(bodyX + size * 70, bodyY + size * 10, size * 10, size * 10);
         g.fillRect(bodyX + size * 80, bodyY + size * 20, size * 10, size * 10);
         g.fillRect(bodyX + size * 90, bodyY + size * 30, size * 10, size * 10);
+        dragonTalk(g);
     }
     private void dragonClear(Graphics g) {
         g.setColor(Color.BLACK);
@@ -99,6 +103,13 @@ public class Dragon
         } else if (attackType.equals("Electricity")) {
             drawElectricity(g);
         }
+    }
+    private void dragonTalk(Graphics g) {
+        int textX = x + size * 26;
+        int textY = y;
+        g.setFont(new Font("Arial", Font.PLAIN, 20));
+        g.setColor(Color.WHITE);
+        g.drawString(dialogue, textX, textY);
     }
     public void dragonMove(Graphics g) throws InterruptedException{
         int bodyX = x + size * 25;
