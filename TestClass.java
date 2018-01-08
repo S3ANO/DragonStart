@@ -46,8 +46,8 @@ public class TestClass
            System.out.println("What Attack Do You Want? Fire, Water, or Electricity?");
            String attack = inputText.next();
            System.out.println("What Do You Want Your Dragon To Say?");
-           String dialogue = inputText.next();
-           Dragon temp = new Dragon(50 * i, 50 * i, size, rgbDrag, attack, dialogue);  
+           String talk = inputText.next();
+           Dialogue temp = new Dialogue(50 * i, 50 * i, size, rgbDrag, attack, talk); 
            dragons.add(temp);
        }
        for(i = 0; i < num; i++){
