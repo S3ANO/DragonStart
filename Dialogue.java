@@ -28,11 +28,11 @@ public class Dialogue extends Dragon
      * @param  y  a sample parameter for a method
      * @return    the sum of x and y
      */
-    private void dragonTalk(Graphics g) {
+    public void dragonTalk(Graphics g) {
         int textX = x + size * 26;
         int textY = y + 1;
         g.setFont(new Font("Arial", Font.PLAIN, 20));
         g.setColor(Color.WHITE);
-        g.drawString(talk, textX, textY);
+        return g.drawString(talk, textX, textY);
     }
 }

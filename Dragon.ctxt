@@ -1,17 +1,17 @@
 #BlueJ class context
 comment0.target=Dragon
-comment0.text=\n\ Write\ a\ description\ of\ class\ Dragon\ here.\n\n\ @author\ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Dragon\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=
 comment1.target=Dragon()
-comment1.text=\n\ Default\ Constructor\ for\ objects\ of\ class\ Dragon\n
+comment1.text=\r\n\ Default\ Constructor\ for\ objects\ of\ class\ Dragon\r\n
 comment10.params=
 comment10.target=java.lang.String\ toString()
-comment10.text=\n\ toString\n
+comment10.text=\r\n\ toString\r\n
 comment2.params=x\ y\ size\ c\ attackType
 comment2.target=Dragon(int,\ int,\ int,\ java.awt.Color,\ java.lang.String)
 comment3.params=g
 comment3.target=void\ drawDragon(java.awt.Graphics)
-comment3.text=\n\ drawDragon(Graphics\ g)\n\ Starting\ of\ drawing,\ complete\ your\ Dragon....\n
+comment3.text=\r\n\ drawDragon(Graphics\ g)\r\n\ Starting\ of\ drawing,\ complete\ your\ Dragon....\r\n
 comment4.params=g
 comment4.target=void\ dragonClear(java.awt.Graphics)
 comment5.params=g
